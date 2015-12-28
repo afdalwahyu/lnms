@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -113,7 +114,7 @@ class UsersController extends Controller {
         }
 
         \Session::flash('flash_message', 'user ' . $user->username . ' updated.');
-        
+
         // update
         $user->update($input);
 

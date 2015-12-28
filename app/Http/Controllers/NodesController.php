@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -195,7 +196,7 @@ class NodesController extends Controller {
         }
 
         \Session::flash('flash_message', 'node ' . $node->ip_address . ' updated.');
-        
+
         // update
         $node->update($input);
 
@@ -411,25 +412,25 @@ class NodesController extends Controller {
             break;
 
          case '.1.3.6.1.4.1.9.1.716': // cat296024TT
-         case '.1.3.6.1.4.1.9.1.927': // cat296048TCS      
-         case '.1.3.6.1.4.1.9.1.928': // cat296024TCS      
-         case '.1.3.6.1.4.1.9.1.929': // cat296024S        
-         case '.1.3.6.1.4.1.9.1.1179': // cat2960x48tsS     
-         case '.1.3.6.1.4.1.9.1.1180': // cat2960x24tsS     
-         case '.1.3.6.1.4.1.9.1.1181': // cat2960xs48fpdL   
-         case '.1.3.6.1.4.1.9.1.1182': // cat2960xs48lpdL   
-         case '.1.3.6.1.4.1.9.1.1183': // cat2960xs48ltdL   
-         case '.1.3.6.1.4.1.9.1.1184': // cat2960xs24pdL    
-         case '.1.3.6.1.4.1.9.1.1185': // cat2960xs24tdL    
-         case '.1.3.6.1.4.1.9.1.1186': // cat2960xs48fpsL   
-         case '.1.3.6.1.4.1.9.1.1187': // cat2960xs48lpsL   
-         case '.1.3.6.1.4.1.9.1.1188': // cat2960xs24psL    
-         case '.1.3.6.1.4.1.9.1.1189': // cat2960xs48tsL    
-         case '.1.3.6.1.4.1.9.1.1190': // cat2960xs24tsL    
-         case '.1.3.6.1.4.1.9.1.1208': // cat29xxStack      
-         case '.1.3.6.1.4.1.9.1.1278': // cat2960cPD8TT     
-         case '.1.3.6.1.4.1.9.1.1315': // cat2960cPD8PT     
-         case '.1.3.6.1.4.1.9.1.1316': // cat2960cG8TC      
+         case '.1.3.6.1.4.1.9.1.927': // cat296048TCS
+         case '.1.3.6.1.4.1.9.1.928': // cat296024TCS
+         case '.1.3.6.1.4.1.9.1.929': // cat296024S
+         case '.1.3.6.1.4.1.9.1.1179': // cat2960x48tsS
+         case '.1.3.6.1.4.1.9.1.1180': // cat2960x24tsS
+         case '.1.3.6.1.4.1.9.1.1181': // cat2960xs48fpdL
+         case '.1.3.6.1.4.1.9.1.1182': // cat2960xs48lpdL
+         case '.1.3.6.1.4.1.9.1.1183': // cat2960xs48ltdL
+         case '.1.3.6.1.4.1.9.1.1184': // cat2960xs24pdL
+         case '.1.3.6.1.4.1.9.1.1185': // cat2960xs24tdL
+         case '.1.3.6.1.4.1.9.1.1186': // cat2960xs48fpsL
+         case '.1.3.6.1.4.1.9.1.1187': // cat2960xs48lpsL
+         case '.1.3.6.1.4.1.9.1.1188': // cat2960xs24psL
+         case '.1.3.6.1.4.1.9.1.1189': // cat2960xs48tsL
+         case '.1.3.6.1.4.1.9.1.1190': // cat2960xs24tsL
+         case '.1.3.6.1.4.1.9.1.1208': // cat29xxStack
+         case '.1.3.6.1.4.1.9.1.1278': // cat2960cPD8TT
+         case '.1.3.6.1.4.1.9.1.1315': // cat2960cPD8PT
+         case '.1.3.6.1.4.1.9.1.1316': // cat2960cG8TC
             // Cisco Catalyst 2960 Series Switches
             return 'Cisco\Cat2960';
             break;
@@ -506,22 +507,22 @@ class NodesController extends Controller {
          case '.1.3.6.1.4.1.11.2.3.7.11.43': //     HP ProCurve 3400cl-48G      J4906A
          case '.1.3.6.1.4.1.11.2.3.7.11.44': //     HP ProCurve 2650            J4899B
          case '.1.3.6.1.4.1.11.2.3.7.11.45': //     HP ProCurve 2626            J4900B
-         case '.1.3.6.1.4.1.11.2.3.7.11.61': //     HP ProCurve 2510-24         J9019A 
+         case '.1.3.6.1.4.1.11.2.3.7.11.61': //     HP ProCurve 2510-24         J9019A
          case '.1.3.6.1.4.1.11.2.3.7.11.62': //     HP ProCurve 2510-48         J9020A
-         case '.1.3.6.1.4.1.11.2.3.7.11.63': //     HP ProCurve 2810-24G        J9021A 
-         case '.1.3.6.1.4.1.11.2.3.7.11.64': //     HP ProCurve 2810-48G        J9022A 
+         case '.1.3.6.1.4.1.11.2.3.7.11.63': //     HP ProCurve 2810-24G        J9021A
+         case '.1.3.6.1.4.1.11.2.3.7.11.64': //     HP ProCurve 2810-48G        J9022A
          case '.1.3.6.1.4.1.11.2.3.7.11.65': //     HP ProCurve 1800-24G        J9028A
          case '.1.3.6.1.4.1.11.2.3.7.11.66': //     HP ProCurve 1800-8G         J9029A
-         case '.1.3.6.1.4.1.11.2.3.7.11.68': //     HP ProCurve 2900-48G        J9050A  
-         case '.1.3.6.1.4.1.11.2.3.7.11.69': //     HP ProCurve 2900-24G        J9049A  
+         case '.1.3.6.1.4.1.11.2.3.7.11.68': //     HP ProCurve 2900-48G        J9050A
+         case '.1.3.6.1.4.1.11.2.3.7.11.69': //     HP ProCurve 2900-24G        J9049A
          case '.1.3.6.1.4.1.11.2.3.7.11.74': //     HP ProCurve 1700-8          J9079A
          case '.1.3.6.1.4.1.11.2.3.7.11.75': //     HP ProCurve 1700-24         J9080A
-         case '.1.3.6.1.4.1.11.2.3.7.11.79': //     HP Switch 2610-48-PoE       J9089A 
+         case '.1.3.6.1.4.1.11.2.3.7.11.79': //     HP Switch 2610-48-PoE       J9089A
          case '.1.3.6.1.4.1.11.2.3.7.11.80': //     HP Switch 2610-24-PPoE      J9086A
          case '.1.3.6.1.4.1.11.2.3.7.11.81': //     HP ProCurve 1800-24G-B      J9028B
          case '.1.3.6.1.4.1.11.2.3.7.11.82': //     HP ProCurve 2626            J4900C
          case '.1.3.6.1.4.1.11.2.3.7.11.83': //     HP ProCurve 2650            J4899C
-         case '.1.3.6.1.4.1.11.2.3.7.11.90': //     HP ProCurve 2510-24         J9019B 
+         case '.1.3.6.1.4.1.11.2.3.7.11.90': //     HP ProCurve 2510-24         J9019B
          case '.1.3.6.1.4.1.11.2.3.7.11.94': //     HP ProCurve 2520-8-PoE      J9137A
          case '.1.3.6.1.4.1.11.2.3.7.11.95': //     HP ProCurve 2520-24-PoE     J9138A
          case '.1.3.6.1.4.1.11.2.3.7.11.96': //     HP ProCurve 2520-8G-PoE     J9298A
@@ -537,7 +538,7 @@ class NodesController extends Controller {
             return 'Hp\Bridge';
             break;
 
-         case '.1.3.6.1.4.1.14823.1.1.13':  // Aruba 3200    
+         case '.1.3.6.1.4.1.14823.1.1.13':  // Aruba 3200
          case '.1.3.6.1.4.1.14823.1.1.15':  // Aruba 3400
          case '.1.3.6.1.4.1.14823.1.1.17':  // Aruba 3600
             // Aruba 3000 Series Mobility Controllers
@@ -672,7 +673,7 @@ class NodesController extends Controller {
 
         return view('nodes.discover', compact('node', 'discover_result'));
     }
-    
+
     /**
      * run snmp to discover node
      *
@@ -695,7 +696,7 @@ class NodesController extends Controller {
 
         $discover_result .= 'Node Class: ' . $node_poll_class . ', ';
 
-        // init result          
+        // init result
         $poller_result = [];
 
         foreach ($node_object->pollers() as $table_name => $pollers) {
@@ -797,7 +798,7 @@ class NodesController extends Controller {
                             'status'     => $i_status,
                             'interval'   => $i_interval,
                         ];
-    
+
                         \DB::table('pollings')
                                     ->insert($i_polling_data);
                     }

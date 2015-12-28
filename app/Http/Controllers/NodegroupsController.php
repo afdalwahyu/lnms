@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -98,7 +99,7 @@ class NodegroupsController extends Controller {
         $nodegroup = \App\Nodegroup::findOrFail($id);
         $input = $request->all();
         \Session::flash('flash_message', 'nodegroup ' . $nodegroup->name . ' updated.');
-        
+
         // update
         $nodegroup->update($input);
 

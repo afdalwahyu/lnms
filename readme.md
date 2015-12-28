@@ -42,7 +42,6 @@ Route::get('lol',function(){
 });
 ```
 
-
 ## License
 
 lnms is open-sourced software licensed under the
