@@ -30,7 +30,7 @@ Run php artisan migrate
 $ php artisan migrate
 ```
 
-open localhost/lol/ in browser to create a username, or you can edit in routes.php in line 16 to 23
+open localhost/lol/ in browser to create a username, you can edit user information in routes.php in line 16 to 23
 ```php
 Route::get('lol',function(){
   $user = new User;
