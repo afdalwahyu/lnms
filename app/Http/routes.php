@@ -11,6 +11,17 @@
 |
 */
 
+use App\User;
+
+Route::get('lol',function(){
+  $user = new User;
+  $user->name = 'afdal';
+  $user->email = 'afdalwahyu@gmail.com';
+  $user->username = 'afdalwahyu';
+  $user->password = bcrypt('test');
+  $user->save();
+});
+
 // temporary disable register and password pages
 Route::get('auth/register', function() {
     return 'disabled';
@@ -78,5 +89,3 @@ Route::get('dashboard_by_location', 'PagesController@dashboard_by_location');
 Route::get('dashboard_by_project',  'PagesController@dashboard_by_project');
 Route::get('dashboard_by_ssid',     'PagesController@dashboard_by_ssid');
 Route::get('dashboard_by_clients',  'PagesController@dashboard_by_clients');
-
-
